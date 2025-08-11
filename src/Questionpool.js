@@ -35,10 +35,8 @@ const QUESTION_BUNDLES = [
         panelCount: 0,
         minPanelCount: 0,
         maxPanelCount: 10,
-        allowAddPanel: true,
-        allowRemovePanel: true,
-        panelAddText: "Add Child",
-        panelRemoveText: "Remove Child",
+        allowAddPanel: false,
+        allowRemovePanel: false,
         templateTitle: "Child #{panelIndex}"
       }
     ]
@@ -65,8 +63,8 @@ const QUESTION_BUNDLES = [
         panelCount: 0,
         minPanelCount: 0,
         maxPanelCount: 15,
-        allowAddPanel: true,
-        allowRemovePanel: true,
+        allowAddPanel: false,
+        allowRemovePanel: false,
         templateTitle: "Member #{panelIndex}",
         templateElements: [
           { type: "text", name: "member_name", title: "Member's Name", isRequired: true },
@@ -84,8 +82,8 @@ const QUESTION_BUNDLES = [
             visibleIf: "{panel.asset_count} > 0",
             panelCount: 0,
             maxPanelCount: 20,
-            allowAddPanel: true,
-            allowRemovePanel: true,
+            allowAddPanel: false,
+            allowRemovePanel: false,
             templateTitle: "Asset #{panelIndex}",
             templateElements: [
               { type: "text", name: "asset_name", title: "Asset Name (e.g., Phone, Bicycle)", isRequired: true },
