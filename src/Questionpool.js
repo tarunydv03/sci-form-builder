@@ -6,7 +6,7 @@ const QUESTION_BUNDLES = [
   // --- FIXED BUNDLE #1: Simple Repeating Group (Fixed Dynamic Panel) ---
   {
     id: "bundle_simple_repeat_v2",
-    bundleTitle: "Repeating Group (for Children)",
+    bundleTitle: "Children information",
     questionSchemas: [
       {
         type: "text",
@@ -45,7 +45,7 @@ const QUESTION_BUNDLES = [
   // --- FIXED BUNDLE #2: Nested Repeating Group (Improved) ---
   {
     id: "bundle_nested_repeat_v2",
-    bundleTitle: "Nested Repeats (Household & Assets)",
+    bundleTitle: "Household Information",
     questionSchemas: [
       {
         type: "text",
@@ -104,7 +104,7 @@ const QUESTION_BUNDLES = [
   // --- FIXED BUNDLE #3: Choice Filter (Country/City) - Fixed Implementation ---
   {
     id: "bundle_choice_filter_v2",
-    bundleTitle: "Dependent Choices (Country/City)",
+    bundleTitle: "Location Selection",
     questionSchemas: [
       {
         type: "radiogroup",
@@ -134,7 +134,7 @@ const QUESTION_BUNDLES = [
   // --- NEW BUNDLE #4: Advanced Skip Logic Group ---
   {
     id: "bundle_skip_logic_v1",
-    bundleTitle: "Skip Logic Group (Employment)",
+    bundleTitle: "Employment Status and Details",
     questionSchemas: [
       {
         type: "radiogroup",
@@ -186,7 +186,7 @@ const QUESTION_BUNDLES = [
   // --- NEW BUNDLE #5: Media Upload Bundle ---
   {
     id: "bundle_media_upload_v1",
-    bundleTitle: "Media Upload (Image, Audio, Document)",
+    bundleTitle: "Document and Media Uploads",
     questionSchemas: [
       {
         type: "file",
@@ -224,7 +224,7 @@ const QUESTION_BUNDLES = [
   // --- NEW BUNDLE #6: Constraint Questions ---
   {
     id: "bundle_constraints_v1",
-    bundleTitle: "Constraint Questions (Age, Income)",
+    bundleTitle: "Income and Age",
     questionSchemas: [
       {
         type: "text",
@@ -274,7 +274,7 @@ const QUESTION_BUNDLES = [
   // --- NEW BUNDLE #7: Grouping Questions ---
   {
     id: "bundle_grouped_questions_v1",
-    bundleTitle: "Grouped Questions (Personal Info)",
+    bundleTitle: "Personal and Contact Information",
     questionSchemas: [
       {
         type: "panel",
@@ -334,7 +334,7 @@ const QUESTION_BUNDLES = [
   // --- NEW BUNDLE #8: Range and Scale Questions ---
   {
     id: "bundle_range_scale_v1",
-    bundleTitle: "Range & Scale Questions",
+    bundleTitle: "Ratings",
     questionSchemas: [
       {
         type: "rating",
@@ -372,7 +372,7 @@ const QUESTION_BUNDLES = [
   // --- NEW BUNDLE #9: Multiple Selection with Logic ---
   {
     id: "bundle_multiple_select_logic_v1",
-    bundleTitle: "Multiple Selection with Follow-up Logic",
+    bundleTitle: "Feedback on Features",
     questionSchemas: [
       {
         type: "checkbox",
@@ -401,7 +401,7 @@ const QUESTION_BUNDLES = [
   // --- NEW BUNDLE #10: Calculate and Expression Fields ---
   {
     id: "bundle_calculations_v1",
-    bundleTitle: "Calculations (Auto-computed Fields)",
+    bundleTitle: "Product Pricing Calculator",
     questionSchemas: [
       {
         type: "text",
@@ -446,7 +446,7 @@ const QUESTION_BUNDLES = [
   // --- EXISTING BUNDLE #11: Email Logic Block ---
   {
     id: "bundle_email_v1",
-    bundleTitle: "Email Logic Block (Yes/No with Follow-up)",
+    bundleTitle: "Email Address Collection",
     questionSchemas: [
       {
         type: "radiogroup",
@@ -469,7 +469,7 @@ const QUESTION_BUNDLES = [
   // --- EXISTING BUNDLE #12: Age Question ---
   {
     id: "bundle_age_v1",
-    bundleTitle: "Age Question (with validation)",
+    bundleTitle: "Age Verification Question",
     questionSchemas: [{
       type: "text",
       name: "age",
@@ -483,7 +483,7 @@ const QUESTION_BUNDLES = [
   // --- EXISTING BUNDLE #13: Multiple Choice ---
   {
     id: "bundle_equipment_v1",
-    bundleTitle: "Multiple Choice Question",
+    bundleTitle: "Equipment Usage Question",
     questionSchemas: [{
       type: "checkbox",
       name: "equipment",
@@ -495,7 +495,7 @@ const QUESTION_BUNDLES = [
   // --- EXISTING BUNDLE #14: Image Upload ---
   {
     id: "bundle_photo_id_v1",
-    bundleTitle: "Simple Image Upload Question",
+    bundleTitle: "Signature and Photo ID Upload",
     questionSchemas: [{
       type: "file",
       name: "photo_id",
@@ -590,7 +590,7 @@ export function QuestionPool({ onAddQuestions }) {
     <div>
       <h3>XLS Form Feature Pool</h3>
       <p style={{ fontSize: '12px', color: '#666', marginBottom: '15px' }}>
-        Choose from {QUESTION_BUNDLES.length} XLS Form compatible question bundles
+        Choose from {QUESTION_BUNDLES.length} XLS Form compatible questions
       </p>
       {QUESTION_BUNDLES.map((bundle) => (
         <div key={bundle.id} style={{ 
@@ -610,7 +610,7 @@ export function QuestionPool({ onAddQuestions }) {
           <button 
             onClick={() => onAddQuestions(bundle.questionSchemas)}
             style={{
-              backgroundColor: '#007bff',
+              backgroundColor: '#21B18C',
               color: 'white',
               border: 'none',
               padding: '6px 12px',
