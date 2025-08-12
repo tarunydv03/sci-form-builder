@@ -285,27 +285,32 @@ function App() {
         
         <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', flexWrap: 'wrap' }}>
           <span style={{ 
-            backgroundColor: questionCount > 0 ? '#28a745' : '#6c757d',
-            color: 'white',
+            backgroundColor: '#6c757d', // Always grey
+            color: '#fff', // Bright white text
             padding: '4px 12px',
             borderRadius: '12px',
-            fontSize: '12px'
+            fontSize: '13px',
+            fontWeight: 600,
+            letterSpacing: '0.5px',
+            boxShadow: '0 2px 6px rgba(0,0,0,0.08)'
           }}>
             {questionCount} question{questionCount !== 1 ? 's' : ''} added
           </span>
-          
           {questionCount > 0 && (
             <>
               <button 
                 onClick={clearSurvey}
                 style={{
-                  backgroundColor: '#dc3545',
-                  color: 'white',
+                  backgroundColor: '#6c757d', // Grey
+                  color: '#fff', // Bright white
                   border: 'none',
                   padding: '4px 12px',
-                  borderRadius: '4px',
+                  borderRadius: '12px',
                   cursor: 'pointer',
-                  fontSize: '12px'
+                  fontSize: '13px',
+                  fontWeight: 600,
+                  letterSpacing: '0.5px',
+                  boxShadow: '0 2px 6px rgba(0,0,0,0.08)'
                 }}
               >
                 Clear Survey
@@ -313,13 +318,16 @@ function App() {
               <button 
                 onClick={exportSurveyJson}
                 style={{
-                  backgroundColor: '#17a2b8',
-                  color: 'white',
+                  backgroundColor: '#6c757d', // Grey
+                  color: '#fff', // Bright white
                   border: 'none',
                   padding: '4px 12px',
-                  borderRadius: '4px',
+                  borderRadius: '12px',
                   cursor: 'pointer',
-                  fontSize: '12px'
+                  fontSize: '13px',
+                  fontWeight: 600,
+                  letterSpacing: '0.5px',
+                  boxShadow: '0 2px 6px rgba(0,0,0,0.08)'
                 }}
               >
                 Export JSON
@@ -386,16 +394,17 @@ function App() {
               />
             ) : (
               <div style={{ 
-                textAlign: 'center', 
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                textAlign: 'center',
                 color: '#999',
-                padding: '60px 20px'
+                height: '100%',
+                minHeight: '340px',
+                padding: '0 20px'
               }}>
-                <h4 style={{ margin: '0 0 15px 0' }}>No Questions Added Yet</h4>
-                <p style={{ margin: '0' }}>
-                  Select question bundles from the Feature Pool on the left to build your survey.
-                  <br />
-                  Each bundle contains related questions with built-in logic and validation.
-                </p>
+                <h4 style={{ margin: '0 0 15px 0', fontSize: '1.5rem', fontWeight: 500 }}>No Questions Added Yet</h4>
               </div>
             )}
           </div>
